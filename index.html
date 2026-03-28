@@ -1,0 +1,1085 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Perseverança - Gestão Condominial de Excelência. Serviços profissionais de hidráulica, pintura, civil e tecnologia para condomínios no Rio de Janeiro com profissionais 100% verificados.">
+    <meta name="keywords" content="gestão condominial, hidráulica, pintura predial, condomínio, Rio de Janeiro, serviços prediais, segurança">
+    <meta property="og:title" content="Perseverança | Gestão Condominial de Excelência" />
+    <meta property="og:description" content="Soluções completas para gestão e manutenção de condomínios com profissionais verificados e 15+ anos de experiência." />
+    <meta property="og:image" content="https://images.unsplash.com/photo-1486325212027-8081e485255e?w=1200&q=85" />
+    <meta property="og:url" content="https://leomartinsali01-sys.github.io" />
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="theme-color" content="#060f1e">
+    <title>Perseverança | Gestão Condominial de Excelência</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-XXXXXXXXXX');
+    </script>
+    <style>
+        :root {
+            --navy: #060f1e;
+            --navy-mid: #0c1f3a;
+            --blue: #1a4b8c;
+            --accent: #4de8c2;
+            --accent-dark: #2ec4a0;
+            --gold: #c8a96e;
+            --gray: #7a8ba8;
+            --light: #e8eef7;
+            --white: #ffffff;
+        }
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body {
+            font-family: 'DM Sans', system-ui, sans-serif;
+            background: var(--navy);
+            color: var(--white);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* ── URGENCY BANNER ── */
+        .urgency-banner {
+            background: linear-gradient(135deg, rgba(77,232,194,0.15), rgba(200,169,110,0.1));
+            border-bottom: 1px solid rgba(77,232,194,0.3);
+            padding: 12px 6%;
+            text-align: center;
+            font-size: 0.85rem;
+            color: var(--accent);
+            letter-spacing: 1px;
+            font-weight: 600;
+            animation: slideDown 0.6s ease;
+            position: relative;
+            z-index: 999;
+        }
+        @keyframes slideDown {
+            from { transform: translateY(-100%); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+
+        /* ── SCROLL PROGRESS ── */
+        #progress-bar {
+            position: fixed; top: 0; left: 0;
+            height: 2px; width: 0%;
+            background: linear-gradient(90deg, var(--accent), var(--gold));
+            z-index: 9999; transition: width 0.08s linear;
+        }
+
+        /* ── CURSOR ── */
+        .cursor {
+            width: 8px; height: 8px; background: var(--accent);
+            border-radius: 50%; position: fixed; pointer-events: none;
+            z-index: 9998; transform: translate(-50%,-50%);
+            mix-blend-mode: difference;
+        }
+        .cursor-ring {
+            width: 34px; height: 34px;
+            border: 1.5px solid rgba(77,232,194,0.45); border-radius: 50%;
+            position: fixed; pointer-events: none; z-index: 9997;
+            transform: translate(-50%,-50%); transition: all 0.13s ease-out;
+        }
+
+        /* ── HEADER ── */
+        header {
+            position: fixed; top: 47px; width: 100%;
+            padding: 22px 6%;
+            display: flex; justify-content: space-between; align-items: center;
+            z-index: 1000; transition: all 0.4s ease;
+        }
+        header.scrolled {
+            top: 0;
+            background: rgba(6,15,30,0.97);
+            backdrop-filter: blur(20px);
+            padding: 15px 6%;
+            border-bottom: 1px solid rgba(77,232,194,0.07);
+            box-shadow: 0 4px 50px rgba(0,0,0,0.5);
+        }
+        .logo { display: flex; flex-direction: column; line-height: 1; }
+        .logo-main {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.45rem; font-weight: 900;
+            color: var(--white); letter-spacing: 3px; text-transform: uppercase;
+        }
+        .logo-sub {
+            font-size: 0.62rem; letter-spacing: 4px;
+            color: var(--accent); text-transform: uppercase; margin-top: 4px;
+        }
+        nav { display: flex; align-items: center; gap: 38px; }
+        nav a {
+            color: var(--gray); text-decoration: none;
+            font-size: 0.82rem; letter-spacing: 1.5px; text-transform: uppercase;
+            transition: color 0.3s; position: relative;
+        }
+        nav a::after {
+            content: ''; position: absolute; bottom: -4px; left: 0;
+            width: 0; height: 1px; background: var(--accent); transition: width 0.3s;
+        }
+        nav a:hover { color: var(--accent); }
+        nav a:hover::after { width: 100%; }
+        .cta-header {
+            background: transparent; color: var(--accent);
+            padding: 10px 26px; border: 1px solid var(--accent); border-radius: 2px;
+            text-decoration: none; font-weight: 600;
+            font-size: 0.78rem; letter-spacing: 2px; text-transform: uppercase;
+            transition: all 0.3s ease; position: relative;
+        }
+        .cta-header::before {
+            content: 'GRÁTIS'; position: absolute; top: -8px; right: 8px;
+            font-size: 0.5rem; background: var(--gold); color: var(--navy);
+            padding: 2px 6px; border-radius: 1px; font-weight: 800;
+        }
+        .cta-header:hover { background: var(--accent); color: var(--navy); }
+
+        /* ── HERO (split layout do index.html) ── */
+        .hero {
+            min-height: 100vh;
+            display: grid; grid-template-columns: 1fr 1fr;
+            position: relative; overflow: hidden;
+            margin-top: 47px;
+        }
+        .hero-left {
+            display: flex; align-items: center;
+            padding: 120px 6% 80px; position: relative; z-index: 2;
+        }
+        .hero-right { position: relative; overflow: hidden; }
+        .hero-right-img {
+            width: 100%; height: 100%; object-fit: cover;
+            filter: brightness(0.55) saturate(0.9);
+        }
+        .hero-right-overlay {
+            position: absolute; inset: 0;
+            background: linear-gradient(to right, var(--navy) 0%, transparent 55%),
+                        linear-gradient(to top, var(--navy) 0%, transparent 40%);
+        }
+        .hero-floating-card {
+            position: absolute; bottom: 50px; right: 40px;
+            background: rgba(12,31,58,0.92);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(77,232,194,0.2);
+            border-radius: 4px; padding: 18px 22px;
+            display: flex; align-items: center; gap: 14px;
+        }
+        .hero-floating-icon {
+            width: 42px; height: 42px;
+            background: rgba(77,232,194,0.12); border-radius: 4px;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 1.3rem; flex-shrink: 0;
+        }
+        .hero-floating-text strong { font-size: 1.1rem; color: var(--accent); font-weight: 700; display: block; }
+        .hero-floating-text span { font-size: 0.7rem; color: var(--gray); letter-spacing: 0.5px; }
+        .hero-bg-glow {
+            position: absolute; inset: 0;
+            background: radial-gradient(ellipse at 40% 60%, rgba(26,75,140,0.28) 0%, transparent 60%);
+        }
+        .hero-grid-lines {
+            position: absolute; inset: 0;
+            background-image:
+                linear-gradient(rgba(77,232,194,0.03) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(77,232,194,0.03) 1px, transparent 1px);
+            background-size: 55px 55px;
+            mask-image: radial-gradient(ellipse at 30% 50%, black 20%, transparent 70%);
+        }
+        .hero-content { position: relative; z-index: 1; max-width: 620px; }
+        .hero-badge {
+            display: inline-flex; align-items: center; gap: 10px;
+            padding: 6px 16px;
+            border: 1px solid rgba(200,169,110,0.35); border-radius: 2px;
+            margin-bottom: 32px;
+        }
+        .hero-badge span { font-size: 0.7rem; letter-spacing: 3px; text-transform: uppercase; color: var(--gold); }
+        .hero-badge-dot { width: 6px; height: 6px; background: var(--gold); border-radius: 50%; animation: pulse 2s infinite; }
+        .hero h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(2.8rem, 4.5vw, 5rem);
+            font-weight: 900; line-height: 1.06; margin-bottom: 24px;
+        }
+        .hero h1 em { font-style: italic; color: var(--accent); }
+        .hero-desc {
+            font-size: 1.05rem; color: var(--gray);
+            max-width: 480px; line-height: 1.85;
+            margin-bottom: 44px; font-weight: 300;
+        }
+        .hero-actions { display: flex; gap: 16px; flex-wrap: wrap; margin-bottom: 20px; }
+        .trust-badge {
+            display: flex; align-items: center; gap: 8px;
+            font-size: 0.75rem; color: var(--accent);
+        }
+        .trust-badge-icon { font-size: 1.1rem; }
+
+        /* ── BUTTONS ── */
+        .btn-wp {
+            background: #25d366; color: white;
+            padding: 15px 34px; border-radius: 2px;
+            text-decoration: none; font-weight: 600; font-size: 0.88rem;
+            display: inline-flex; align-items: center; gap: 9px;
+            transition: all 0.3s; box-shadow: 0 0 28px rgba(37,211,102,0.22);
+            position: relative;
+        }
+        .btn-wp::before {
+            content: 'GRÁTIS'; position: absolute; top: -8px; right: 10px;
+            font-size: 0.5rem; background: var(--gold); color: var(--navy);
+            padding: 2px 6px; border-radius: 1px; font-weight: 800;
+        }
+        .btn-wp:hover { transform: translateY(-2px); box-shadow: 0 8px 32px rgba(37,211,102,0.38); }
+        .btn-outline {
+            background: transparent; color: var(--light);
+            padding: 15px 34px; border: 1px solid rgba(255,255,255,0.14); border-radius: 2px;
+            text-decoration: none; font-size: 0.88rem;
+            display: inline-flex; align-items: center; gap: 9px; transition: all 0.3s;
+        }
+        .btn-outline:hover { border-color: var(--accent); color: var(--accent); }
+        .btn-dark {
+            background: var(--navy); color: var(--accent);
+            padding: 15px 34px; border-radius: 2px;
+            text-decoration: none; font-weight: 600; font-size: 0.88rem;
+            display: inline-flex; align-items: center; gap: 9px;
+            border: 1px solid var(--navy); transition: all 0.3s;
+        }
+        .btn-dark:hover { background: transparent; border-color: var(--navy); color: var(--navy); }
+
+        /* ── STATS ── */
+        .stats {
+            background: var(--navy-mid);
+            border-top: 1px solid rgba(77,232,194,0.07);
+            border-bottom: 1px solid rgba(77,232,194,0.07);
+        }
+        .stats-inner {
+            display: grid; grid-template-columns: repeat(4,1fr);
+            max-width: 1200px; margin: 0 auto;
+        }
+        .stat {
+            padding: 46px 28px; text-align: center;
+            border-right: 1px solid rgba(77,232,194,0.07);
+            position: relative; overflow: hidden; transition: background 0.3s;
+        }
+        .stat:last-child { border-right: none; }
+        .stat:hover { background: rgba(77,232,194,0.03); }
+        .stat::after {
+            content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 2px;
+            background: linear-gradient(90deg, var(--accent), var(--gold));
+            transform: scaleX(0); transition: transform 0.4s;
+        }
+        .stat:hover::after { transform: scaleX(1); }
+        .stat-number {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.8rem; font-weight: 700;
+            color: var(--accent); line-height: 1; display: block;
+        }
+        .stat-label {
+            color: var(--gray); font-size: 0.75rem;
+            letter-spacing: 1.5px; text-transform: uppercase; margin-top: 10px;
+        }
+
+        /* ── SERVICE SECTIONS (full-screen do index.html) ── */
+        .service-section {
+            min-height: 100vh;
+            display: grid; grid-template-columns: 1fr 1fr;
+            position: relative; overflow: hidden;
+        }
+        .service-section.flipped { direction: rtl; }
+        .service-section.flipped > * { direction: ltr; }
+        .svc-photo { position: relative; overflow: hidden; }
+        .svc-photo img {
+            width: 100%; height: 100%; object-fit: cover; display: block;
+            transition: transform 1.2s cubic-bezier(0.25,0.46,0.45,0.94);
+        }
+        .service-section:hover .svc-photo img { transform: scale(1.05); }
+        .svc-photo-overlay {
+            position: absolute; inset: 0;
+            background: linear-gradient(to right, rgba(6,15,30,0.15), transparent 55%);
+        }
+        .service-section.flipped .svc-photo-overlay {
+            background: linear-gradient(to left, rgba(6,15,30,0.15), transparent 55%);
+        }
+        .svc-photo-num {
+            position: absolute; bottom: 32px; left: 32px;
+            font-family: 'Playfair Display', serif;
+            font-size: 7rem; font-weight: 900;
+            color: rgba(255,255,255,0.08); line-height: 1;
+            pointer-events: none; user-select: none; letter-spacing: -4px;
+        }
+        .service-section.flipped .svc-photo-num { left: auto; right: 32px; }
+        .svc-photo-label {
+            position: absolute; top: 36px; left: 36px;
+            display: flex; align-items: center; gap: 10px;
+        }
+        .service-section.flipped .svc-photo-label { left: auto; right: 36px; }
+        .svc-label-line { width: 28px; height: 1px; background: var(--accent); }
+        .svc-label-text {
+            font-size: 0.67rem; letter-spacing: 3px; text-transform: uppercase;
+            color: var(--accent); font-weight: 600;
+        }
+        .svc-photo::after {
+            content: ''; position: absolute; top: 0; right: 0;
+            width: 3px; height: 100%;
+            background: linear-gradient(to bottom, transparent, var(--accent) 40%, transparent);
+            opacity: 0.35;
+        }
+        .service-section.flipped .svc-photo::after { right: auto; left: 0; }
+        .svc-content {
+            background: var(--navy);
+            display: flex; flex-direction: column; justify-content: center;
+            padding: 80px 68px; position: relative; overflow: hidden;
+        }
+        .svc-content-glow {
+            position: absolute; inset: 0;
+            background: radial-gradient(ellipse at 80% 20%, rgba(26,75,140,0.15), transparent 65%);
+            pointer-events: none;
+        }
+        .svc-divider {
+            position: absolute; top: 0; left: 0;
+            width: 1px; height: 100%;
+            background: linear-gradient(to bottom, transparent, rgba(77,232,194,0.18) 40%, transparent);
+        }
+        .service-section.flipped .svc-divider { left: auto; right: 0; }
+        .svc-eyebrow {
+            display: flex; align-items: center; gap: 12px;
+            margin-bottom: 26px; position: relative; z-index: 1;
+        }
+        .svc-icon {
+            width: 42px; height: 42px;
+            background: rgba(77,232,194,0.08);
+            border: 1px solid rgba(77,232,194,0.18); border-radius: 4px;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 1.1rem; flex-shrink: 0;
+        }
+        .svc-num-label { font-size: 0.68rem; letter-spacing: 3px; text-transform: uppercase; color: var(--gray); }
+        .svc-title {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(2rem, 3vw, 2.9rem);
+            font-weight: 900; line-height: 1.1;
+            margin-bottom: 18px; position: relative; z-index: 1;
+        }
+        .svc-title span { color: var(--accent); }
+        .svc-desc {
+            font-size: 0.93rem; color: var(--gray);
+            line-height: 1.9; margin-bottom: 36px;
+            font-weight: 300; max-width: 400px; position: relative; z-index: 1;
+        }
+        .svc-items {
+            list-style: none;
+            border-top: 1px solid rgba(255,255,255,0.055);
+            position: relative; z-index: 1;
+        }
+        .svc-items li {
+            padding: 13px 0;
+            border-bottom: 1px solid rgba(255,255,255,0.055);
+            display: grid; grid-template-columns: 22px 1fr;
+            align-items: center; gap: 13px;
+            font-size: 0.9rem; color: var(--light);
+            transition: color 0.25s, padding-left 0.25s;
+        }
+        .svc-items li:hover { color: var(--accent); padding-left: 6px; }
+        .svc-check {
+            width: 22px; height: 22px;
+            border: 1px solid rgba(77,232,194,0.28); border-radius: 3px;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 0.62rem; color: var(--accent); flex-shrink: 0;
+        }
+        .svc-cta { margin-top: 38px; position: relative; z-index: 1; }
+        .svc-cta a {
+            display: inline-flex; align-items: center; gap: 10px;
+            color: var(--accent); text-decoration: none;
+            font-size: 0.8rem; font-weight: 600; letter-spacing: 2px; text-transform: uppercase;
+            border-bottom: 1px solid rgba(77,232,194,0.28); padding-bottom: 5px;
+            transition: gap 0.3s, border-color 0.3s;
+        }
+        .svc-cta a:hover { gap: 16px; border-color: var(--accent); }
+
+        /* ── CASE STUDIES (do sdsdsddtt.html) ── */
+        .case-studies {
+            padding: 100px 6%;
+            background: var(--navy);
+            position: relative; overflow: hidden;
+        }
+        .case-studies::before {
+            content: ''; position: absolute; top: 0; left: 0; right: 0; height: 1px;
+            background: linear-gradient(90deg, transparent, rgba(77,232,194,0.18) 50%, transparent);
+        }
+        .case-studies-inner { max-width: 1200px; margin: 0 auto; }
+        .case-studies-header {
+            text-align: center; max-width: 600px; margin: 0 auto 60px;
+        }
+        .case-studies-header .section-tag { color: var(--accent-dark); }
+        .case-studies-header .section-title { color: var(--white); }
+        .case-studies-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 28px;
+        }
+        .case-study-card {
+            background: rgba(12,31,58,0.6);
+            border: 1px solid rgba(77,232,194,0.12);
+            border-radius: 4px; padding: 36px 28px;
+            position: relative; overflow: hidden; transition: all 0.3s;
+        }
+        .case-study-card::before {
+            content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px;
+            background: linear-gradient(90deg, var(--accent), var(--gold));
+            transform: scaleX(0); transform-origin: left; transition: transform 0.4s;
+        }
+        .case-study-card:hover {
+            background: rgba(12,31,58,0.95);
+            border-color: rgba(77,232,194,0.28);
+            transform: translateY(-4px);
+        }
+        .case-study-card:hover::before { transform: scaleX(1); }
+        .case-study-icon { font-size: 2rem; margin-bottom: 16px; }
+        .case-study-title { font-size: 1.2rem; font-weight: 700; color: var(--white); margin-bottom: 12px; }
+        .case-study-problem { font-size: 0.85rem; color: var(--gray); margin-bottom: 16px; line-height: 1.6; }
+        .case-study-result {
+            font-size: 0.85rem; color: var(--accent); font-weight: 600;
+            padding-top: 16px; border-top: 1px solid rgba(77,232,194,0.15);
+        }
+
+        /* ── FAQ (do sdsdsddtt.html) ── */
+        .faq-section { padding: 100px 6%; background: #f7f9fb; }
+        .faq-inner { max-width: 800px; margin: 0 auto; }
+        .faq-header { text-align: center; margin-bottom: 60px; }
+        .faq-header .section-tag { color: var(--accent-dark); }
+        .faq-header .section-title { color: var(--navy); }
+        .faq-header .section-title em { color: var(--blue); font-style: italic; }
+        .faq-item {
+            background: white; border: 1px solid #e8eef4;
+            border-radius: 4px; margin-bottom: 12px; overflow: hidden; transition: all 0.3s;
+        }
+        .faq-item:hover { border-color: var(--accent-dark); box-shadow: 0 8px 24px rgba(46,196,160,0.1); }
+        .faq-toggle {
+            width: 100%; padding: 20px; background: white; border: none; cursor: pointer;
+            display: flex; justify-content: space-between; align-items: center;
+            font-size: 1rem; font-weight: 600; color: var(--navy); text-align: left; transition: all 0.3s;
+        }
+        .faq-toggle:hover { background: rgba(46,196,160,0.03); color: var(--accent-dark); }
+        .faq-toggle.active { background: rgba(46,196,160,0.06); color: var(--accent-dark); }
+        .faq-toggle::after { content: '▼'; font-size: 0.8rem; transition: transform 0.3s; color: var(--accent-dark); }
+        .faq-toggle.active::after { transform: rotate(180deg); }
+        .faq-content { max-height: 0; overflow: hidden; transition: max-height 0.3s ease; background: rgba(46,196,160,0.02); }
+        .faq-content.active { max-height: 500px; padding: 0 20px 20px; }
+        .faq-text { font-size: 0.95rem; color: #5a6a7e; line-height: 1.8; font-weight: 300; }
+
+        /* ── REVIEWS (do index.html) ── */
+        .reviews { background: #f7f9fb; padding: 100px 6% 80px; overflow: hidden; }
+        .reviews-header { text-align: center; max-width: 560px; margin: 0 auto 60px; }
+        .reviews-header .section-tag { color: var(--accent-dark); }
+        .reviews-header .section-title { color: var(--navy); }
+        .reviews-header .section-title em { font-style: italic; color: var(--blue); }
+        .reviews-track-wrap {
+            overflow: hidden; position: relative; margin: 0 -6%; padding: 0 6%;
+        }
+        .reviews-track-wrap::before,
+        .reviews-track-wrap::after {
+            content: ''; position: absolute; top: 0; bottom: 0; width: 80px; z-index: 2; pointer-events: none;
+        }
+        .reviews-track-wrap::before { left: 0; background: linear-gradient(to right, #f7f9fb, transparent); }
+        .reviews-track-wrap::after  { right: 0; background: linear-gradient(to left, #f7f9fb, transparent); }
+        .reviews-track { display: flex; gap: 24px; transition: transform 0.6s cubic-bezier(0.4,0,0.2,1); will-change: transform; }
+        .review-card {
+            background: #fff; border: 1px solid #e8eef4; border-radius: 4px;
+            padding: 36px 32px; min-width: 340px; max-width: 340px;
+            flex-shrink: 0; position: relative; transition: box-shadow 0.3s, transform 0.3s;
+        }
+        .review-card:hover { box-shadow: 0 12px 40px rgba(0,0,0,0.09); transform: translateY(-4px); }
+        .review-card::before {
+            content: '"'; position: absolute; top: 16px; right: 24px;
+            font-family: 'Playfair Display', serif; font-size: 5rem; line-height: 1;
+            color: var(--accent); opacity: 0.18; pointer-events: none;
+        }
+        .review-stars { color: #f4a929; font-size: 0.78rem; letter-spacing: 2px; margin-bottom: 16px; }
+        .review-text { font-size: 0.9rem; color: #3a4a5c; line-height: 1.8; margin-bottom: 24px; font-weight: 300; }
+        .review-author { display: flex; align-items: center; gap: 12px; border-top: 1px solid #edf1f6; padding-top: 20px; }
+        .review-avatar {
+            width: 38px; height: 38px; border-radius: 50%;
+            background: linear-gradient(135deg, var(--accent-dark), var(--blue));
+            display: flex; align-items: center; justify-content: center;
+            font-size: 0.78rem; font-weight: 700; color: #fff; flex-shrink: 0;
+        }
+        .review-name { font-size: 0.85rem; font-weight: 600; color: var(--navy); display: block; }
+        .review-role { font-size: 0.72rem; color: var(--gray); display: block; margin-top: 2px; }
+        .reviews-controls { display: flex; align-items: center; justify-content: center; gap: 20px; margin-top: 44px; }
+        .reviews-btn {
+            width: 40px; height: 40px; border: 1px solid #d0dae5; border-radius: 50%;
+            background: #fff; cursor: pointer;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 0.9rem; color: var(--navy); transition: all 0.3s;
+        }
+        .reviews-btn:hover { border-color: var(--accent-dark); color: var(--accent-dark); }
+        .reviews-dots { display: flex; gap: 8px; }
+        .reviews-dot {
+            width: 6px; height: 6px; border-radius: 50%;
+            background: #c8d5e0; cursor: pointer; transition: all 0.3s;
+        }
+        .reviews-dot.active { background: var(--accent-dark); width: 20px; border-radius: 3px; }
+
+        /* ── SAFETY ── */
+        .safety { padding: 110px 6%; background: var(--navy); position: relative; overflow: hidden; }
+        .safety::before {
+            content: ''; position: absolute; top: 0; left: 0; right: 0; height: 1px;
+            background: linear-gradient(90deg, transparent, rgba(77,232,194,0.18) 50%, transparent);
+        }
+        .safety-inner {
+            max-width: 1200px; margin: 0 auto;
+            display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center;
+        }
+        .safety-visual { position: relative; }
+        .safety-shield-box {
+            width: 100%; aspect-ratio: 1; max-width: 400px;
+            background: linear-gradient(135deg, rgba(77,232,194,0.05), rgba(26,75,140,0.12));
+            border: 1px solid rgba(77,232,194,0.1); border-radius: 4px;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 7rem; position: relative;
+        }
+        .safety-shield-box::before {
+            content: ''; position: absolute; inset: -1px; border-radius: 4px;
+            background: linear-gradient(135deg, rgba(77,232,194,0.22), transparent 60%);
+            z-index: -1;
+        }
+        .safety-pill-stack {
+            position: absolute; right: -22px; top: 50%; transform: translateY(-50%);
+            display: flex; flex-direction: column; gap: 10px;
+        }
+        .safety-pill {
+            background: rgba(12,31,58,0.97);
+            border: 1px solid rgba(77,232,194,0.16); border-radius: 3px;
+            padding: 12px 18px; display: flex; align-items: center; gap: 11px;
+            white-space: nowrap; box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+        }
+        .safety-pill-icon { font-size: 1.1rem; }
+        .safety-pill-text strong { font-size: 0.79rem; display: block; color: var(--white); }
+        .safety-pill-text span { font-size: 0.67rem; color: var(--gray); }
+        .safety-checks { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+        .check-item {
+            display: flex; align-items: center; gap: 12px; padding: 14px 16px;
+            background: rgba(77,232,194,0.03);
+            border: 1px solid rgba(77,232,194,0.09); border-radius: 3px;
+            transition: border-color 0.3s, background 0.3s;
+        }
+        .check-item:hover { border-color: rgba(77,232,194,0.22); background: rgba(77,232,194,0.06); }
+        .check-icon {
+            width: 30px; height: 30px; background: rgba(77,232,194,0.1); border-radius: 2px;
+            display: flex; align-items: center; justify-content: center;
+            font-size: 0.85rem; flex-shrink: 0;
+        }
+        .check-text { font-size: 0.8rem; color: var(--light); line-height: 1.4; }
+
+        /* ── SHARED TEXT HELPERS ── */
+        .section-tag {
+            display: block; font-size: 0.7rem;
+            letter-spacing: 4px; text-transform: uppercase;
+            color: var(--accent-dark); margin-bottom: 14px;
+        }
+        .section-title {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(1.9rem, 3.5vw, 3rem);
+            font-weight: 700; line-height: 1.12; margin-bottom: 16px;
+        }
+        .section-desc {
+            font-size: 0.93rem; color: var(--gray);
+            line-height: 1.9; font-weight: 300; margin-bottom: 40px;
+        }
+
+        /* ── CONTACT ── */
+        .contact { padding: 110px 6%; background: #f7f9fb; text-align: center; }
+        .contact-inner { max-width: 680px; margin: 0 auto; }
+        .contact .section-tag { text-align: center; }
+        .contact .section-title { color: var(--navy); text-align: center; margin-bottom: 14px; }
+        .contact-desc { color: #5a6a7e; font-size: 0.95rem; margin-bottom: 44px; font-weight: 300; line-height: 1.85; }
+        .contact-actions { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
+        .guarantee-badge {
+            background: rgba(46,196,160,0.1); border: 1px solid rgba(46,196,160,0.3);
+            border-radius: 4px; padding: 16px; margin-top: 28px;
+            font-size: 0.85rem; color: var(--navy); line-height: 1.6;
+        }
+        .guarantee-badge strong { color: var(--accent-dark); }
+
+        /* ── FOOTER ── */
+        footer { background: var(--navy); padding: 48px 6%; border-top: 1px solid rgba(77,232,194,0.07); }
+        .footer-inner {
+            max-width: 1200px; margin: 0 auto;
+            display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 20px;
+        }
+        .footer-copy { color: var(--gray); font-size: 0.8rem; }
+        .footer-copy strong { color: var(--accent); }
+        .footer-links { display: flex; gap: 28px; }
+        .footer-links a {
+            color: var(--gray); text-decoration: none;
+            font-size: 0.75rem; letter-spacing: 1px; text-transform: uppercase; transition: color 0.3s;
+        }
+        .footer-links a:hover { color: var(--accent); }
+        .social-links { display: flex; gap: 16px; }
+        .social-links a {
+            width: 36px; height: 36px;
+            border: 1px solid rgba(77,232,194,0.2); border-radius: 50%;
+            display: flex; align-items: center; justify-content: center;
+            color: var(--accent); text-decoration: none; font-size: 0.85rem; transition: all 0.3s;
+        }
+        .social-links a:hover { background: rgba(77,232,194,0.1); border-color: var(--accent); }
+
+        /* ── ANIMATIONS ── */
+        @keyframes fadeInUp { from { opacity: 0; transform: translateY(28px); } to { opacity: 1; transform: translateY(0); } }
+        @keyframes pulse { 0%,100% { opacity: 1; } 50% { opacity: 0.35; } }
+        @keyframes scrollLine {
+            0% { transform: scaleY(0); transform-origin: top; }
+            50% { transform: scaleY(1); transform-origin: top; }
+            51% { transform: scaleY(1); transform-origin: bottom; }
+            100% { transform: scaleY(0); transform-origin: bottom; }
+        }
+
+        .reveal { opacity: 1; transform: none; }
+        body.js-ready .reveal {
+            opacity: 0; transform: translateY(32px);
+            transition: opacity 0.7s ease, transform 0.7s ease;
+        }
+        body.js-ready .reveal.visible { opacity: 1; transform: translateY(0); }
+        .reveal-delay-1 { transition-delay: 0.1s; }
+        .reveal-delay-2 { transition-delay: 0.2s; }
+        .reveal-delay-3 { transition-delay: 0.3s; }
+
+        /* ── MOBILE ── */
+        @media (max-width: 960px) {
+            .hero { grid-template-columns: 1fr; min-height: auto; }
+            .hero-right { height: 50vw; }
+            .hero-right-overlay { background: linear-gradient(to top, var(--navy) 0%, transparent 50%); }
+            .hero-left { padding: 130px 6% 60px; }
+            nav { display: none; }
+            .stats-inner { grid-template-columns: repeat(2,1fr); }
+            .stat { border-right: none; border-bottom: 1px solid rgba(77,232,194,0.07); }
+            .service-section { grid-template-columns: 1fr; min-height: auto; direction: ltr !important; }
+            .svc-photo { height: 60vw; min-height: 280px; }
+            .svc-content { padding: 52px 32px; }
+            .svc-divider { display: none; }
+            .safety-inner { grid-template-columns: 1fr; gap: 50px; }
+            .safety-visual { display: none; }
+            .safety-checks { grid-template-columns: 1fr; }
+            .review-card { min-width: 280px; max-width: 280px; }
+            .cta-header::before, .btn-wp::before { display: none; }
+        }
+        @media (max-width: 600px) {
+            .hero-actions { flex-direction: column; }
+            .btn-wp, .btn-outline { justify-content: center; }
+            .contact-actions { flex-direction: column; align-items: center; }
+            .hero-floating-card { display: none; }
+            .review-card { min-width: 260px; max-width: 260px; padding: 28px 22px; }
+            .urgency-banner { padding: 10px 6%; font-size: 0.75rem; }
+        }
+    </style>
+    <base target="_blank">
+</head>
+<body>
+
+<div class="urgency-banner">⏰ Vagas limitadas este mês! Resposta em até 2 horas via WhatsApp</div>
+<div id="progress-bar"></div>
+<div class="cursor" id="cursor"></div>
+<div class="cursor-ring" id="cursorRing"></div>
+
+<!-- HEADER -->
+<header id="header">
+    <div class="logo">
+        <span class="logo-main">Perseverança</span>
+        <span class="logo-sub">Gestão Condominial</span>
+    </div>
+    <nav>
+        <a href="#servicos" target="_self">Serviços</a>
+        <a href="#seguranca" target="_self">Segurança</a>
+        <a href="#avaliacoes" target="_self">Avaliações</a>
+        <a href="#contato" target="_self">Contato</a>
+    </nav>
+    <a href="https://wa.me/5511999999999" class="cta-header">Orçamento</a>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+    <div class="hero-left">
+        <div class="hero-bg-glow"></div>
+        <div class="hero-grid-lines"></div>
+        <div class="hero-content">
+            <div class="hero-badge">
+                <div class="hero-badge-dot"></div>
+                <span>Gestão Condominial de Excelência</span>
+            </div>
+            <h1>Seu condomínio<br>gerido com<br><em>disciplina.</em></h1>
+            <p class="hero-desc">Rigor, confiança e profissionalismo sob a gestão de especialista em Segurança Pública. Soluções completas para o seu patrimônio.</p>
+            <div class="hero-actions">
+                <a href="https://wa.me/5511999999999" class="btn-wp">
+                    <svg width="17" height="17" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                    Solicitar Orçamento
+                </a>
+                <a href="#servicos" class="btn-outline" target="_self">Ver Serviços →</a>
+            </div>
+            <div class="trust-badge">
+                <span class="trust-badge-icon">✓</span>
+                <span><strong>30 dias</strong> de garantia de satisfação</span>
+            </div>
+        </div>
+    </div>
+    <div class="hero-right">
+        <img class="hero-right-img"
+            src="https://images.unsplash.com/photo-1486325212027-8081e485255e?w=1400&q=85"
+            alt="Prédio condominial bem gerido"
+        />
+        <div class="hero-right-overlay"></div>
+        <div class="hero-floating-card">
+            <div class="hero-floating-icon">🛡️</div>
+            <div class="hero-floating-text">
+                <strong>500+</strong>
+                <span>Condomínios atendidos</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- STATS -->
+<section class="stats">
+    <div class="stats-inner">
+        <div class="stat reveal"><span class="stat-number">100%</span><div class="stat-label">Funcionários Verificados</div></div>
+        <div class="stat reveal reveal-delay-1"><span class="stat-number">24h</span><div class="stat-label">Atendimento Emergencial</div></div>
+        <div class="stat reveal reveal-delay-2"><span class="stat-number">15+</span><div class="stat-label">Anos de Experiência</div></div>
+        <div class="stat reveal reveal-delay-3"><span class="stat-number">500+</span><div class="stat-label">Condomínios Atendidos</div></div>
+    </div>
+</section>
+
+<!-- SERVIÇO 1: ESGOTO & HIDRÁULICA -->
+<section class="service-section" id="servicos">
+    <div class="svc-photo">
+        <img src="https://images.pexels.com/photos/6419128/pexels-photo-6419128.jpeg?auto=compress&cs=tinysrgb&w=1400"
+             onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1621905252507-b35492cc74b4?w=1400&q=85'"
+             alt="Encanador instalando conexões em canos e tubulações" loading="lazy"/>
+        <div class="svc-photo-overlay"></div>
+        <div class="svc-photo-label"><div class="svc-label-line"></div><span class="svc-label-text">Hidráulica</span></div>
+        <div class="svc-photo-num">01</div>
+    </div>
+    <div class="svc-content reveal">
+        <div class="svc-content-glow"></div>
+        <div class="svc-divider"></div>
+        <div class="svc-eyebrow">
+            <div class="svc-icon">🚰</div>
+            <span class="svc-num-label">Serviço 01 de 03</span>
+        </div>
+        <h2 class="svc-title">Esgoto &<br><span>Hidráulica</span></h2>
+        <p class="svc-desc">Soluções completas para o sistema hidráulico do seu condomínio — do diagnóstico à execução, com equipamentos modernos e profissionais certificados.</p>
+        <ul class="svc-items">
+            <li><div class="svc-check">✓</div> Sucção com Caminhão Eco</li>
+            <li><div class="svc-check">✓</div> Limpeza de Caixa de Gordura</li>
+            <li><div class="svc-check">✓</div> Desentupimento de Colunas</li>
+            <li><div class="svc-check">✓</div> Manutenção de Ralos e Sifões</li>
+        </ul>
+        <div class="svc-cta"><a href="https://wa.me/5511999999999">Solicitar este serviço →</a></div>
+    </div>
+</section>
+
+<!-- SERVIÇO 2: CIVIL & PINTURA -->
+<section class="service-section flipped">
+    <div class="svc-photo">
+        <img src="https://images.pexels.com/photos/6474471/pexels-photo-6474471.jpeg?auto=compress&cs=tinysrgb&w=1400"
+             onerror="this.onerror=null;this.src='https://images.pexels.com/photos/18369835/pexels-photo-18369835.jpeg?auto=compress&cs=tinysrgb&w=1400'"
+             alt="Homem pintando parede de apartamento com rolo" loading="lazy"/>
+        <div class="svc-photo-overlay"></div>
+        <div class="svc-photo-label"><div class="svc-label-line"></div><span class="svc-label-text">Civil</span></div>
+        <div class="svc-photo-num">02</div>
+    </div>
+    <div class="svc-content reveal">
+        <div class="svc-content-glow"></div>
+        <div class="svc-divider"></div>
+        <div class="svc-eyebrow">
+            <div class="svc-icon">🎨</div>
+            <span class="svc-num-label">Serviço 02 de 03</span>
+        </div>
+        <h2 class="svc-title">Civil &<br><span>Pintura</span></h2>
+        <p class="svc-desc">Revitalização e manutenção estrutural do seu condomínio, devolvendo estética e segurança ao patrimônio com acabamento impecável.</p>
+        <ul class="svc-items">
+            <li><div class="svc-check">✓</div> Pintura Predial de Fachada</li>
+            <li><div class="svc-check">✓</div> Reparos em Pisos e Revestimentos</li>
+            <li><div class="svc-check">✓</div> Manutenção Patrimonial</li>
+            <li><div class="svc-check">✓</div> Restauração de Áreas Comuns</li>
+        </ul>
+        <div class="svc-cta"><a href="https://wa.me/5511999999999">Solicitar este serviço →</a></div>
+    </div>
+</section>
+
+<!-- SERVIÇO 3: TECNOLOGIA & ELÉTRICA -->
+<section class="service-section">
+    <div class="svc-photo">
+        <img src="https://images.pexels.com/photos/3205735/pexels-photo-3205735.jpeg?auto=compress&cs=tinysrgb&w=1400"
+             onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1557804506-669a67965ba0?w=1400&q=85'"
+             alt="Sistema de monitoramento por câmera com celular" loading="lazy"/>
+        <div class="svc-photo-overlay"></div>
+        <div class="svc-photo-label"><div class="svc-label-line"></div><span class="svc-label-text">Tecnologia</span></div>
+        <div class="svc-photo-num">03</div>
+    </div>
+    <div class="svc-content reveal">
+        <div class="svc-content-glow"></div>
+        <div class="svc-divider"></div>
+        <div class="svc-eyebrow">
+            <div class="svc-icon">📹</div>
+            <span class="svc-num-label">Serviço 03 de 03</span>
+        </div>
+        <h2 class="svc-title">Tecnologia &<br><span>Elétrica</span></h2>
+        <p class="svc-desc">Modernize a infraestrutura do seu condomínio com câmeras HD, automação e instalações elétricas de alto padrão.</p>
+        <ul class="svc-items">
+            <li><div class="svc-check">✓</div> Instalação de Câmeras HD</li>
+            <li><div class="svc-check">✓</div> Sistemas de Alarme Inteligente</li>
+            <li><div class="svc-check">✓</div> Automação Smart Home</li>
+            <li><div class="svc-check">✓</div> Elétrica Predial Completa</li>
+        </ul>
+        <div class="svc-cta"><a href="https://wa.me/5511999999999">Solicitar este serviço →</a></div>
+    </div>
+</section>
+
+<!-- CASOS DE SUCESSO -->
+<section class="case-studies" id="resultados">
+    <div class="case-studies-inner reveal">
+        <div class="case-studies-header">
+            <span class="section-tag">— Nossos Resultados</span>
+            <h2 class="section-title">Casos de Sucesso</h2>
+            <p class="section-desc">Confira como a Perseverança transformou condomínios do Rio de Janeiro.</p>
+        </div>
+        <div class="case-studies-grid">
+            <div class="case-study-card reveal">
+                <div class="case-study-icon">💧</div>
+                <h3 class="case-study-title">Cond. Solar Botafogo</h3>
+                <p class="case-study-problem"><strong>Problema:</strong> Entupimento crônico na coluna causando transtornos.</p>
+                <p class="case-study-result"><strong>Resultado:</strong> Resolvido em 4h. Problema 100% eliminado.</p>
+            </div>
+            <div class="case-study-card reveal reveal-delay-1">
+                <div class="case-study-icon">🎨</div>
+                <h3 class="case-study-title">Edifício Atlântico, Ipanema</h3>
+                <p class="case-study-problem"><strong>Problema:</strong> Fachada deteriorada com infiltrações.</p>
+                <p class="case-study-result"><strong>Resultado:</strong> Pintura completa. Prédio como novo.</p>
+            </div>
+            <div class="case-study-card reveal reveal-delay-2">
+                <div class="case-study-icon">📹</div>
+                <h3 class="case-study-title">Residencial Tijuca Park</h3>
+                <p class="case-study-problem"><strong>Problema:</strong> Falta de sistema de segurança moderno.</p>
+                <p class="case-study-result"><strong>Resultado:</strong> Câmeras HD + alarme inteligente instalados.</p>
+            </div>
+            <div class="case-study-card reveal reveal-delay-3">
+                <div class="case-study-icon">✅</div>
+                <h3 class="case-study-title">Barra Residence, Barra da Tijuca</h3>
+                <p class="case-study-problem"><strong>Problema:</strong> Gestão deficiente com profissionais não verificados.</p>
+                <p class="case-study-result"><strong>Resultado:</strong> 100% verificados. 98% de satisfação.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq-section" id="faq">
+    <div class="faq-inner">
+        <div class="faq-header reveal">
+            <span class="section-tag">— Dúvidas Frequentes</span>
+            <h2 class="section-title">Perguntas <em>Frequentes</em></h2>
+        </div>
+        <div class="faq-item reveal">
+            <button class="faq-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.classList.toggle('active');">Qual é o preço dos serviços?</button>
+            <div class="faq-content"><p class="faq-text">Enviamos orçamento personalizado para cada condomínio via WhatsApp. Não há custos ocultos e a avaliação inicial é gratuita.</p></div>
+        </div>
+        <div class="faq-item reveal reveal-delay-1">
+            <button class="faq-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.classList.toggle('active');">Qual o tempo de resposta?</button>
+            <div class="faq-content"><p class="faq-text">Respondemos em até 2 horas via WhatsApp. Em emergências, atendemos 24h por dia, 7 dias por semana.</p></div>
+        </div>
+        <div class="faq-item reveal reveal-delay-2">
+            <button class="faq-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.classList.toggle('active');">Vocês atendem minha região?</button>
+            <div class="faq-content"><p class="faq-text">Atendemos todo o Rio de Janeiro e região, incluindo Zona Sul, Zona Norte, Barra da Tijuca, Niterói e Grande Rio. Consulte disponibilidade por WhatsApp.</p></div>
+        </div>
+        <div class="faq-item reveal reveal-delay-3">
+            <button class="faq-toggle" onclick="this.nextElementSibling.classList.toggle('active');this.classList.toggle('active');">Há garantia no serviço?</button>
+            <div class="faq-content"><p class="faq-text">Sim! Oferecemos 30 dias de garantia de satisfação em todos os serviços. Se não ficar satisfeito, devolvemos seu investimento.</p></div>
+        </div>
+    </div>
+</section>
+
+<!-- SEGURANÇA -->
+<section class="safety" id="seguranca">
+    <div class="safety-inner">
+        <div class="safety-visual reveal">
+            <div class="safety-shield-box">🛡️
+                <div class="safety-pill-stack">
+                    <div class="safety-pill"><span class="safety-pill-icon">✅</span><div class="safety-pill-text"><strong>Antecedentes Verificados</strong><span>Todos os profissionais</span></div></div>
+                    <div class="safety-pill"><span class="safety-pill-icon">🎖️</span><div class="safety-pill-text"><strong>Disciplina Militar</strong><span>Padrão de excelência</span></div></div>
+                    <div class="safety-pill"><span class="safety-pill-icon">📋</span><div class="safety-pill-text"><strong>Segurança Pública</strong><span>Gestão especializada</span></div></div>
+                </div>
+            </div>
+        </div>
+        <div>
+            <span class="section-tag reveal" style="color:var(--accent);">— Diferencial de Segurança</span>
+            <h2 class="section-title reveal" style="color:var(--white);">Profissionais que<br>você pode confiar</h2>
+            <p class="section-desc reveal">Todos os nossos profissionais passam por rigorosa verificação de antecedentes criminais. Trabalhamos com disciplina e metodologia de Segurança Pública em cada visita ao seu condomínio.</p>
+            <div class="safety-checks reveal">
+                <div class="check-item"><div class="check-icon">🔍</div><span class="check-text">Verificação de antecedentes criminais</span></div>
+                <div class="check-item"><div class="check-icon">📱</div><span class="check-text">Atendimento 24h em emergências</span></div>
+                <div class="check-item"><div class="check-icon">📄</div><span class="check-text">Relatórios detalhados de cada serviço</span></div>
+                <div class="check-item"><div class="check-icon">🎯</div><span class="check-text">Gestão por especialista em Seg. Pública</span></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- AVALIAÇÕES -->
+<section class="reviews" id="avaliacoes">
+    <div class="reviews-header reveal">
+        <span class="section-tag">— O que dizem nossos clientes</span>
+        <h2 class="section-title">Síndicos do Rio de Janeiro<br><em>recomendam</em></h2>
+    </div>
+    <div class="reviews-track-wrap reveal">
+        <div class="reviews-track" id="reviewsTrack">
+            <div class="review-card">
+                <div class="review-stars">★★★★★</div>
+                <p class="review-text">Contratamos a Perseverança para o sistema hidráulico do nosso condomínio em Botafogo e ficamos impressionados com a agilidade e o profissionalismo. Problema resolvido em menos de 24h, sem transtorno para os moradores.</p>
+                <div class="review-author"><div class="review-avatar">CF</div><div><span class="review-name">Carlos Ferreira</span><span class="review-role">Síndico · Cond. Solar de Botafogo, RJ</span></div></div>
+            </div>
+            <div class="review-card">
+                <div class="review-stars">★★★★★</div>
+                <p class="review-text">Excelente empresa! Fizeram a pintura completa da fachada do nosso prédio em Ipanema. Equipe educada, pontual e com acabamento impecável. Os moradores adoraram o resultado. Super recomendo.</p>
+                <div class="review-author"><div class="review-avatar">AM</div><div><span class="review-name">Ana Maria Lustosa</span><span class="review-role">Síndica · Edifício Atlântico, Ipanema, RJ</span></div></div>
+            </div>
+            <div class="review-card">
+                <div class="review-stars">★★★★★</div>
+                <p class="review-text">A instalação do sistema de câmeras foi feita com total cuidado e sem bagunça. O responsável pela Perseverança explicou tudo direitinho e agora consigo monitorar o condomínio pelo celular de onde estiver. Serviço de primeiro nível.</p>
+                <div class="review-author"><div class="review-avatar">RT</div><div><span class="review-name">Rodrigo Teixeira</span><span class="review-role">Síndico · Residencial Tijuca Park, RJ</span></div></div>
+            </div>
+            <div class="review-card">
+                <div class="review-stars">★★★★★</div>
+                <p class="review-text">Após meses tentando resolver um problema de entupimento crônico nas colunas do prédio, a Perseverança resolveu definitivamente em uma única visita. Seriedade e competência do início ao fim. Recomendo sem hesitar.</p>
+                <div class="review-author"><div class="review-avatar">PO</div><div><span class="review-name">Patricia Oliveira</span><span class="review-role">Síndica · Cond. Barra Residence, Barra da Tijuca, RJ</span></div></div>
+            </div>
+            <div class="review-card">
+                <div class="review-stars">★★★★★</div>
+                <p class="review-text">O diferencial da Perseverança é justamente a segurança que trazem: profissionais verificados, com postura exemplar. Aqui no Flamengo, a vizinhança ficou muito mais tranquila sabendo quem está prestando serviço no condomínio.</p>
+                <div class="review-author"><div class="review-avatar">MN</div><div><span class="review-name">Marcos Nascimento</span><span class="review-role">Síndico · Cond. Vista do Aterro, Flamengo, RJ</span></div></div>
+            </div>
+        </div>
+    </div>
+    <div class="reviews-controls">
+        <button class="reviews-btn" id="revPrev" aria-label="Anterior">←</button>
+        <div class="reviews-dots" id="reviewsDots"></div>
+        <button class="reviews-btn" id="revNext" aria-label="Próximo">→</button>
+    </div>
+</section>
+
+<!-- CONTATO -->
+<section class="contact" id="contato">
+    <div class="contact-inner">
+        <span class="section-tag reveal">— Fale Conosco</span>
+        <h2 class="section-title reveal">Pronto para transformar<br>seu condomínio?</h2>
+        <p class="contact-desc reveal">Entre em contato agora e receba um orçamento sem compromisso. Atendemos toda a região com agilidade e profissionalismo.</p>
+        <div class="contact-actions reveal">
+            <a href="https://wa.me/5511999999999" class="btn-wp">
+                <svg width="17" height="17" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                Chamar no WhatsApp
+            </a>
+            <a href="tel:+5511999999999" class="btn-dark">📞 Ligar Agora</a>
+        </div>
+        <div class="guarantee-badge reveal">
+            <strong>✓ Garantia de 30 dias:</strong> Se não ficar satisfeito, devolvemos seu dinheiro em 100%.
+        </div>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+    <div class="footer-inner">
+        <div class="footer-copy">© 2025 <strong>Perseverança Serviços</strong>. Todos os direitos reservados.</div>
+        <div class="footer-links">
+            <a href="#servicos" target="_self">Serviços</a>
+            <a href="#seguranca" target="_self">Segurança</a>
+            <a href="#avaliacoes" target="_self">Avaliações</a>
+            <a href="#contato" target="_self">Contato</a>
+        </div>
+        <div class="social-links">
+            <a href="https://instagram.com" title="Instagram">📱</a>
+            <a href="https://facebook.com" title="Facebook">f</a>
+            <a href="https://linkedin.com" title="LinkedIn">in</a>
+        </div>
+    </div>
+</footer>
+
+<script>
+    // Progress bar
+    const bar = document.getElementById('progress-bar');
+    window.addEventListener('scroll', () => {
+        const pct = window.scrollY / (document.body.scrollHeight - window.innerHeight) * 100;
+        bar.style.width = pct + '%';
+    });
+
+    // Cursor
+    const cursor = document.getElementById('cursor');
+    const ring = document.getElementById('cursorRing');
+    let mx=0, my=0, rx=0, ry=0;
+    document.addEventListener('mousemove', e => {
+        mx = e.clientX; my = e.clientY;
+        cursor.style.left = mx+'px'; cursor.style.top = my+'px';
+    });
+    (function animRing() {
+        rx += (mx-rx)*0.12; ry += (my-ry)*0.12;
+        ring.style.left = rx+'px'; ring.style.top = ry+'px';
+        requestAnimationFrame(animRing);
+    })();
+
+    // Header scroll — esconde banner ao rolar
+    const header = document.getElementById('header');
+    window.addEventListener('scroll', () => {
+        header.classList.toggle('scrolled', window.scrollY > 60);
+    });
+
+    // Reveal on scroll (seguro — conteúdo visível sem JS)
+    document.body.classList.add('js-ready');
+    const obs = new IntersectionObserver(entries => {
+        entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); obs.unobserve(e.target); } });
+    }, { threshold: 0.08 });
+    document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+
+    // Smooth internal links
+    document.querySelectorAll('a[href^="#"]').forEach(a => {
+        a.addEventListener('click', e => {
+            e.preventDefault();
+            const el = document.querySelector(a.getAttribute('href'));
+            if (el) el.scrollIntoView({ behavior: 'smooth' });
+        });
+    });
+
+    // Reviews carousel
+    (function() {
+        const track = document.getElementById('reviewsTrack');
+        const cards = track.querySelectorAll('.review-card');
+        const dotsEl = document.getElementById('reviewsDots');
+        const btnPrev = document.getElementById('revPrev');
+        const btnNext = document.getElementById('revNext');
+        let current = 0;
+        const total = cards.length;
+
+        cards.forEach((_, i) => {
+            const d = document.createElement('div');
+            d.className = 'reviews-dot' + (i === 0 ? ' active' : '');
+            d.addEventListener('click', () => goTo(i));
+            dotsEl.appendChild(d);
+        });
+
+        function getCardWidth() {
+            return cards[0].offsetWidth + (parseInt(getComputedStyle(track).gap) || 24);
+        }
+        function goTo(idx) {
+            current = (idx + total) % total;
+            track.style.transform = `translateX(-${current * getCardWidth()}px)`;
+            dotsEl.querySelectorAll('.reviews-dot').forEach((d, i) => d.classList.toggle('active', i === current));
+        }
+
+        btnPrev.addEventListener('click', () => goTo(current - 1));
+        btnNext.addEventListener('click', () => goTo(current + 1));
+
+        let timer = setInterval(() => goTo(current + 1), 5000);
+        track.addEventListener('mouseenter', () => clearInterval(timer));
+        track.addEventListener('mouseleave', () => { timer = setInterval(() => goTo(current + 1), 5000); });
+
+        let startX = 0;
+        track.addEventListener('touchstart', e => { startX = e.touches[0].clientX; });
+        track.addEventListener('touchend', e => {
+            const diff = startX - e.changedTouches[0].clientX;
+            if (Math.abs(diff) > 40) goTo(diff > 0 ? current + 1 : current - 1);
+        });
+    })();
+</script>
+</body>
+</html>
